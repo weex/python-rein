@@ -2088,8 +2088,6 @@ def start(multi, identity, setup):
                                 time_offset=time_offset
             )
                     
-                                                                
-
 
     @app.route("/resolve", methods=['POST', 'GET'])
     def job_resolve():

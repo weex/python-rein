@@ -3,6 +3,7 @@ import sys
 import json
 import click
 import getpass
+from datetime import datetime
 from .bitcoinecdsa import privkey_to_address, pubkey, pubkey_to_address, sign
 from .bitcoinaddress import check_bitcoin_address
 from .validate import validate_enrollment
@@ -182,10 +183,11 @@ def build_enrollment_from_dict(user_data):
         mediator_extras = "\nMediator public key: %s\nMediator fee: %s%%" % \
                           (pubkey(user_data['dkey']), user_data['mediator_fee'])
     enrollment = "Rein User Enrollment\nUser: %s\nContact: %s\nMaster signing address: %s\n" \
-                 "Secure Identity Number: %s\nDelegate signing address: %s\n" \
+                 "Secure Identity Number: %s\nDelegate signing address: %s\nTimestamp: %s\n" \
                  "Willing to mediate: %s%s" % \
                  (user_data['name'], user_data['contact'], user_data['maddr'], user_data['msin'],\
-                 user_data['daddr'], user_data['will_mediate'], mediator_extras)
+                 user_data['daddr'], datetime.utcnow().strftime("%s"), user_data['will_mediate'],\
+                 mediator_extras)
     if user_data['testnet']:
         enrollment += '\nTestnet: True'
     return enrollment
