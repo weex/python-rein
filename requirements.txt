@@ -1,5 +1,5 @@
 appdirs==1.4.0
-bip32utils==0.3.post3
+bip32utils>=0.3.post3
 click==6.7
 ecdsa==0.13
 Flask==0.12
