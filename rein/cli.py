@@ -128,7 +128,7 @@ def setup(multi):
         else:
             click.echo('Invalid choice')
             return
-        click.echo("Enrollment complete. Run 'rein buy' to purchase microhosting (required for sync).")
+        click.echo("Enrollment complete. Run 'rein request' or 'rein buy' to connect to a node.")
         log.info('enrollment complete')
     else:
         click.echo("Identity already setup.")
@@ -1494,7 +1494,7 @@ def start(multi, identity, setup):
     @app.route('/exit')
     def make_like_a_tree():
         shutdown_server()
-        return "Server shutting down... Thank you for using Rein."
+        return "Server exited."
 
     @app.route('/<path:path>')
     def serve_static_file(path):

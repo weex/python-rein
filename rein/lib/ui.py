@@ -106,7 +106,7 @@ def create_account(rein):
                'accessing your Rein account, and is only showed once.\n', True, True))
     mnemonic = bip32.generate_mnemonic(128)
     click.echo(' '.join(mnemonic))
-    confirm_mnemonic = click.confirm(highlight('\nConfirm that you put down the mnemonic.\n', True, True),
+    confirm_mnemonic = click.confirm(highlight('\n** Warning ** If you do not write down the mnemonic and keep it safe, you risk losing access to this Rein identity and any funds it controls. Please confirm that you wrote down the mnemonic to continue.\n', True, True),
                                      default=False)
     if confirm_mnemonic:
         click.echo(highlight('\nGenerating BIP32 data...\n', True, True))
@@ -119,7 +119,7 @@ def create_account(rein):
         dxprv = bip32.get_delegate_extended_key(key)
         msin = generate_sin(maddr)
     else:
-        click.echo(highlight('\nTo sign up for Rein you have to put down the mnemonic. Aborting.', False, True))
+        click.echo(highlight('\nPlease confirm that you\'ve written down the mnemonic. Aborting.', False, True))
         quit()
 
     # ---- Mediator ----
