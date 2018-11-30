@@ -61,9 +61,9 @@ init_localization()
 @click.pass_context
 def cli(ctx, debug):
     _("""
-    Rein is a decentralized professional services market and Python-rein is a client
-that provides a user interface. Use this program from your local browser or command 
-line to create an account, post a job, bid, etc.
+    Rein is a decentralized professional services market. Python-rein is the reference client
+used to interface with one or more markets. Use this program from the command line or use the start
+command to open a web browser session to create an account and get started.
 
 \b
     Quick start:
@@ -86,7 +86,7 @@ line to create an account, post a job, bid, etc.
     For more info and the setup guide visit: http://reinproject.org
     """)
     if debug:
-        click.echo("Debuggin'")
+        click.echo("Debug mode enabled.")
     pass
 
 
