@@ -10,7 +10,7 @@ We achieve decentralization by following the internet at large: cheap hosting pa
 
 Servers can be paid for their services but they do not necessarily need to communicate with one other, and while the client attempts to validate what it sees, this validation is not complete nor has the software seen a security review. As such, you are advised to limit use of Rein to small jobs where loss of funds or time spent would not present a significant burden.
 
-To read more about the project, visit http://reinproject.org. Our development roadmap can be found at: https://bitcointalk.org/index.php?topic=1232915.msg17244400#msg17244400
+To read more about the project, visit http://reinproject.org.
 
 ## Development mailing list
 
